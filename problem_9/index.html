@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pagination System</title>
+    <style>
+       
+        #content {
+            max-height: 500px;
+            overflow-y: auto;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        #paginationControls {
+            margin-top: 20px;
+        }
+        .filter {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Advanced Pagination System</h1>
+    <input type="text" id="searchInput" placeholder="Search..." />
+    <div id="filters">
+        
+        <input type="checkbox" class="filter" id="filter1" value="filter1"> Filter 1
+        <input type="checkbox" class="filter" id="filter2" value="filter2"> Filter 2
+    </div>
+    <div id="content"></div>
+    <div id="paginationControls"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

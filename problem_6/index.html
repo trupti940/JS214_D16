@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Closures</title>
+    <style>
+        #counterValue {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="counterValue">0</div>
+    <button id="incrementBtn">Increment</button>
+    <button id="decrementBtn">Decrement</button>
+
+    <script>
+        // Counter Factory Function
+        function createCounter(initialValue = 0) {
+            let counter = initialValue; 
+
+            return {
+                increment: function() {
+                    counter++; 
+                    return counter; 
+                },
+                decrement: function() {
+                    counter--; 
+                    return counter; 
+                }
+            };
+        }
+
+        
+        const counter = createCounter(0);
+
+        
+        function updateUI(value) {
+            document.getElementById('counterValue').textContent = value;
+        }
+
+        
+        document.getElementById('incrementBtn').addEventListener('click', function() {
+            const newValue = counter.increment();
+            updateUI(newValue); 
+        });
+
+        
+        document.getElementById('decrementBtn').addEventListener('click', function() {
+            const newValue = counter.decrement();
+            updateUI(newValue); 
+        });
+
+        
+        updateUI(counter.increment() - 1); 
+    </script>
+</body>
+</html>

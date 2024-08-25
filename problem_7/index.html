@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search Application</title>
+    <style>
+        #searchResults {
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .movie-title {
+            cursor: pointer;
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+        .movie-title:hover {
+            background-color: #f0f0f0;
+        }
+        #movieDetails {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movie Search</h1>
+    <input type="text" id="searchInput" placeholder="Search for a movie...">
+    <div id="searchResults"></div>
+    <div id="movieDetails"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
